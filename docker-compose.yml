@@ -1,0 +1,47 @@
+version: '3'
+services:
+  nextjs:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    command: npm run dev
+    develop:
+      watch:
+        - action: sync
+          path: '.'
+          target: /app
+          ignore:
+            - .git
+            - node_modules/
+        - action: rebuild
+          path: package.json
+    volumes:
+      - .:/app
+      - /app/node_modules
+    ports:
+      - '3000:3000'
+    environment:
+      - NODE_ENV=development
+# This file is used to build the Docker image for the Next.js app using docker-compose. docker-compose is a tool for defining and running multi-container Docker applications. It is useful for testing the app in a Docker container as a development environment
+
+# * To build the Docker image, run the following command in the terminal:
+# docker-compose build
+
+# * To start the Docker container, run the following command in the terminal:
+# docker-compose up
+
+# * TO START THE DOCKER CONTAINER IN watch MODE, RUN THE FOLLOWING COMMAND IN THE TERMINAL:
+# docker compose watch
+
+# TIP: Make sure you have configured watch in this file before running the command. We already did.
+# TIP: Adjust you configuration according to your needs
+
+# The Docker container will start the Next.js app in development mode at http://localhost:3000
+
+# * To stop the Docker container, press Ctrl+C in the terminal or run the following command:
+# docker-compose down
+
+# To stop and remove the Docker container, run the following command:
+# docker-compose down -v
+
+# TIP: The -v flag is used to remove the volumes associated with the Docker container.
