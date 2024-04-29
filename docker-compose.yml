@@ -31,7 +31,7 @@ services:
 # docker-compose up
 
 # * TO START THE DOCKER CONTAINER IN watch MODE, RUN THE FOLLOWING COMMAND IN THE TERMINAL:
-# docker compose watch
+# docker-compose watch
 
 # TIP: Make sure you have configured watch in this file before running the command. We already did.
 # TIP: Adjust you configuration according to your needs

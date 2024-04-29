@@ -28,3 +28,6 @@ CMD ["npm", "start"]
 # * RUN the Docker container with: `docker run -p 3000:3000 APP-NAME`
 
 # NOTE: @see docker-compose.yml for testing and running the app with Docker Compose as a development environment instead of production
+
+# STOP the Docker container with: `docker stop CONTAINER-ID` or simply go to the docker desktop app and stop the container
+# Note: You can get the `CONTAINER-ID` by running `docker ps`
