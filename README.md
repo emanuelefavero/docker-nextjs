@@ -3,6 +3,8 @@
 This is a simple example of how to use Docker with Next.js.
 
 > Tip: See `./Dockerfile` and `./docker-compose.yml` in this repo for more details
+>
+> Note: Before running the commands below, make sure you have [Docker](https://docs.docker.com/get-docker/) installed on your machine
 
 ## How to use
 
@@ -58,3 +60,7 @@ docker-compose down -v
 docker rm CONTAINER-ID
 # or simply go to the Docker Desktop app and remove the container there
 ```
+
+## License
+
+- [MIT](LICENSE.md)
